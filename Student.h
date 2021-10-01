@@ -11,6 +11,7 @@
 #include "Person.h"
 #include<string>
 
+// class student inherits person
 class Student: public Person {
 public: 
     
@@ -20,19 +21,24 @@ public:
  * @param age
  * @param student_id
  */
+// student constructor 
 Student(const std::string& first_name, const std::string& last_name, float age, std::string student_id);
-    
+// declaration of accessor getStudentID    
 std::string getStudentID() const;
     
 /**
  * @param value
  */
+ // declaration of mutator  setStudentID    
+
 void setStudentID(const std::string& value);
-    
+// declaration of method Studies()
 void Studies() const;
-    
+// declaration of ToString() method which overrides   
+
 std::string ToString() override;
-private: 
+private:
+    // declare the m_StudentID private variable with  string type.
     std::string m_studentID;
 
 };

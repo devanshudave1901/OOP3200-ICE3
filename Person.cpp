@@ -4,39 +4,32 @@
  * @version 1
  */
 
-
 #include "Person.h"
+
 
 #include <iostream>
 
 /**
- * Person implementation
+ * Person implementation section
  */
 
-
-/**
- * @param first_name
- * @param last_name
- * @param age
- */
+// implementation (defination) of Person constructor
 Person::Person(std::string first_name, std::string last_name, const float age)
 	:m_age(age) , m_firstName(std::move(first_name)), m_lastName(std::move(last_name))
 {
 
 }
 
-/**
- * @return float
- */
 
+// defination of accesor getAge which returns m_age
 float Person::getAge() const
 {
+    // eturns m_age
     return m_age;
 }
 
-/**
- * @param value
- */
+
+// defination of mutator setAge which set the m_age to the value
 void Person::setAge(const float value) {
     m_age = value;
 }
@@ -44,6 +37,11 @@ void Person::setAge(const float value) {
 /**
  * @return std::string
  */
+
+/// <summary>
+/// defination  accesor getFirstName which returns the m_firstName
+/// </summary>
+/// <returns></returns>
 std::string Person::getFirstName() const
 {
     return m_firstName;
@@ -52,6 +50,7 @@ std::string Person::getFirstName() const
 /**
  * @param value
  */
+// defination of mutator setFirstName. whichsets the m_firstName to value
 void Person::setFirstName(const std::string& value) {
     m_firstName = value;
 }
@@ -59,6 +58,8 @@ void Person::setFirstName(const std::string& value) {
 /**
  * @return std::string
  */
+
+// defination of accesor getLastName which returns m_lastName
 std::string Person::getLastName() const
 {
     return m_lastName;
@@ -66,7 +67,9 @@ std::string Person::getLastName() const
 
 /**
  * @param value
+ *
  */
+// defination of mutator setLastName which sets m_lastName to the value
 void Person::setLastName(const std::string& value) {
     m_lastName = value;
 }
@@ -74,11 +77,13 @@ void Person::setLastName(const std::string& value) {
 /**
  * @return void
  */
+// defination of SaysHello() function which prints the first name and says hello
 void Person::SaysHello() const
 {
     std::cout << getFirstName() << " Says Hello!!" << std::endl;
 }
 
+// defination of ToString()
 std::string Person::ToString()
 {
     std::string output_string;
